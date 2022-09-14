@@ -39,7 +39,7 @@ const increasePeople = () => {
 // ** Splits the bill between fewer people **
 const decreasePeople = () => {
   if (numberOfPerson <= 1) {
- numberOfPeople.textContent = "+It"
+ numberOfPeople.textContent = "Tap +"
     return;
 
   }
