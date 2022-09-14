@@ -11,16 +11,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./styles/style.css" type="text/css" />
-    <title>Tip Calculator</title>
+    <title>VAT Calculator</title>
   </head>
   <body>
     <div class="wrapper">
       <div class="container" id="topContainer">
-        <div class="title">Bill total</div>
+        <div class="title">Bill Total.</div>
         <div class="inputContainer">
-          <span>$</span>
+          <span>&#8358;</span>
           <input
-            onkeyup="calculateBill()"
+            class="calculateBill"
             type="text"
             id="billTotalInput"
             placeholder="0.00"
@@ -28,11 +28,11 @@
         </div>
       </div>
       <div class="container">
-        <div class="title">Tip</div>
+        <div class="title">VAT.</div>
         <div class="inputContainer">
           <span>%</span>
           <input
-            onkeyup="calculateBill()"
+            class="calculateVat"
             type="text"
             id="tipInput"
             placeholder="10"
@@ -44,22 +44,26 @@
           <div class="title">People</div>
           <div class="controls">
             <span class="buttonContainer">
-              <button class="splitButton" onclick="increasePeople()">
+              <button class="splitButton increasePeople">
                 <span class="buttonText">+</span>
               </button>
             </span>
             <span class="splitAmount" id="numberOfPeople">1</span>
             <span class="buttonContainer">
-              <button class="splitButton" onclick="decreasePeople()">
-                <span class="buttonText">-</span>
+              <button class="splitButton">
+                <span class="buttonText decreasePeople">-</span>
               </button>
             </span>
           </div>
         </div>
         <div class="totalContainer">
-          <div class="title">Total per Person</div>
-          <div class="total" id="perPersonTotal">$0.00</div>
+          <div class="title title_fix">Total VAT Amount</div>
+          <div class="total" id="totalVAT">0.00</div>
         </div>
+      </div>
+      <div class="amount title__fix">
+        <div class="title title_fix i">Total Per Person</div>
+        <div class="total" id="perPersonTotal">0.00</div>
       </div>
     </div>
 
